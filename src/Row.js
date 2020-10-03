@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "./axios";
+import YouTube from "react-youtube";
 
 const base_url = "https://image.tmdb.org/t/p/original"; //base url for images src
 
@@ -17,7 +18,15 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
     fetchData();
   }, [fetchUrl]); //dependency, reruns useEffect whenever data is fetched, using variable fetchUrl that is outside block
-  console.log(movies);
+
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
     <div className="row">
       <h2>{title}</h2>
@@ -34,6 +43,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
+      <YouTube videoId={trailerUrl} opts={opts} />
     </div>
   );
 }
