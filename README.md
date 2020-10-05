@@ -5,6 +5,8 @@ Using TMDB movie API to display the movie covers, descriptions and info.
 React Youtube & Movie-Trailer for display of available trailers.
 Deployed on firebase.
 
+![screencapture-webflix-e46af-web-app-2020-10-03-16_04_39](https://user-images.githubusercontent.com/58664635/95062082-c1548880-06fc-11eb-9dcd-5ad113f88401.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
